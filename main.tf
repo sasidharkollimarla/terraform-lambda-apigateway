@@ -56,7 +56,7 @@ resource "aws_api_gateway_resource" "proxy-sasi" {
 
 resource "aws_api_gateway_method" "proxy" {
   rest_api_id   = aws_api_gateway_rest_api.example.id
-  resource_id   = aws_api_gateway_resource.proxy.id
+  resource_id   = aws_api_gateway_resource.proxy-sasi.id
   http_method   = "ANY"
   authorization = "NONE"
 }
